@@ -1,4 +1,5 @@
 import React from 'react';
+import Clock from './clock';
 
 class Root extends React.Component{
   constructor(props){
@@ -8,8 +9,10 @@ class Root extends React.Component{
   render(){
     return(
       <div>
-        TEST
+        <Clock />
       </div>
     );
   }
 }
+
+export default Root;

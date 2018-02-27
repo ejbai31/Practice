@@ -10,6 +10,8 @@ class Root extends React.Component{
     return(
       <div>
         <Clock />
+        <Tabs />
+        <Weather />
       </div>
     );
   }

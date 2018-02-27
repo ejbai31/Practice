@@ -9,6 +9,9 @@ class Clock extends React.Component{
     return(
       <div className="contain">
         <h1>Clock</h1>
+        <div className="data">
+
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Clock from './clock';
+import Clock from './frontend/clock';
 
 class Root extends React.Component{
   constructor(props){
@@ -10,8 +10,6 @@ class Root extends React.Component{
     return(
       <div>
         <Clock />
-        <Tabs />
-        <Weather />
       </div>
     );
   }

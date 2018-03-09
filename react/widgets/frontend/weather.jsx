@@ -12,6 +12,6 @@ export default class Weather extends React.Component{
       <div>
         <h1>Weather</h1>
       </div>
-    )
+    );
   }
 }

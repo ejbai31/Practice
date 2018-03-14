@@ -6,8 +6,22 @@ export default class Weather extends React.Component{
     this.state = {
       weather: null
     };
+    this.pollWeather = this.pollWeather.bind(this);
+  }
+  
+  pollWeather(location){
+    let lat = location.coords.latitude;
+    let long = location.coords.longitude;
+    let url = "http://api.openweathermap.org/data/2.5/weather?";
+    let params = {
+      lat: location.coords.latitude,
+      long: location.coords.longitude
+    };
   }
 
+  componetDidMount(){
+    navigator.geolocation.getCurrentPosition(this.pollWeather);
+  }
 
   render(){
     let content = <div></div>;

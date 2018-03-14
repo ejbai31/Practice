@@ -18,11 +18,14 @@ export default class Weather extends React.Component{
                   <p>{weather.name}</p>
                   <p>{temp.toFixed(1)} degrees</p>
                 </div>;
+    } else {
+      content = <div className='loading'>LOADING...</div>;
     }
     return(
       
       <div>
         <h1>Weather</h1>
+        {content}
       </div>
     );
   }

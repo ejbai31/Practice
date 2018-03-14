@@ -8,7 +8,7 @@ const toQueryString = (obj) => {
       }
   }
   return parts.join('&');
-}
+};
 
 export default class Weather extends React.Component {
   constructor(props) {
@@ -71,4 +71,4 @@ export default class Weather extends React.Component {
       </div>
     );
   }
-};
+}

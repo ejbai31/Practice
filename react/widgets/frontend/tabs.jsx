@@ -21,3 +21,21 @@ class Headers extends React.Component {
     });
   }
 }
+
+export default class Tabs extends React.Componet{
+  constructor(props){
+    super(props);
+    this.state = {
+      selectedPane: 0
+    };
+    this.selectTab = this.selectTab.bind(this);
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>Tabs</h1>
+      </div>
+    );
+  }
+}

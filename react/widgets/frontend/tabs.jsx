@@ -19,6 +19,11 @@ class Headers extends React.Component {
         </li>
       );
     });
+    return(
+      <ul className='header'>
+        {headers}
+      </ul>
+    );
   }
 }
 
@@ -30,11 +35,29 @@ export default class Tabs extends React.Componet{
     };
     this.selectTab = this.selectTab.bind(this);
   }
+  
+  selectTab(num){
+    this.setState({selectedPane: num});
+  }
 
   render(){
+    let pane = this.props.panes[this.state.selectedPane];
     return(
       <div>
         <h1>Tabs</h1>
+        <div className='tabs'>
+          <Headers
+            selectedPane={this.state.selectedPane}
+            onTabChosen={this.selecTab}
+            panes={this.props.panes}
+            >
+          </Headers>
+          <div className='tab-content'>
+            <p>
+              {pane.content}
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

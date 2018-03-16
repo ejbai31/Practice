@@ -1,5 +1,15 @@
 import React from 'react';
 
+const toQueryString = obj => {
+  let parts = [];
+  for(let i in obj){
+    if(obj.hasOwnProperty(i)){
+      parts.push(`${encodeURIComponent(i)}=${encodeURIComponent(obj[i])}`);
+    }
+  }
+  return parts.join('&');
+};
+
 export default class Weather extends React.Component{
   constructor(props){
     super(props);
